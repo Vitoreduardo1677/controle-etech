@@ -12,8 +12,8 @@ const COMANDOS_ETECH = {
     'HORA':       0x43,
     'AVANCAR':    0x09,
     'PLAY':       0x0C,
-    'PASTA_MAIS': 0x1C,
-    'PASTA_MENOS': 0x5A
+    'PASTA_MAIS': 0x5A,
+    'PASTA_MENOS': 0x1C
 };
 
 // Monta os 32 bits NEC: endereço, ~endereço, comando, ~comando
