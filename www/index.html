@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Tech Premium Remote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="remote-container">
+        <div id="irLed" class="ir-led"></div>
+
+        <div class="remote-header">
+            <h1>E-Tech</h1>
+            <p>Premium Audio Control</p>
+        </div>
+
+        <div class="btn-row">
+            <button class="btn-standard btn-power" data-comando="POWER">
+                <span>⚡</span>
+                <span class="label-pwr">PWR</span>
+            </button>
+            <button class="btn-standard" data-comando="MODE">
+                <span>SRC</span>
+                <span class="label-sub">MODO</span>
+            </button>
+            <button class="btn-standard" data-comando="MUTE">
+                <span>🔇</span>
+                <span>MUTE</span>
+            </button>
+        </div>
+
+        <div class="btn-row row-volume">
+            <button class="btn-large" data-comando="VOL_MENOS" data-repetir>
+                <span class="sinal">-</span>
+                <span>VOL</span>
+            </button>
+            <button class="btn-large" data-comando="VOL_MAIS" data-repetir>
+                <span class="sinal">+</span>
+                <span>VOL</span>
+            </button>
+        </div>
+
+        <div class="media-cluster">
+            <div class="btn-row">
+                <button class="btn-standard" data-comando="VOLTAR">
+                    <span class="icone-midia">⏮</span>
+                </button>
+                <button class="btn-standard btn-accent" data-comando="PLAY">
+                    <span class="icone-midia">⏯</span>
+                </button>
+                <button class="btn-standard" data-comando="AVANCAR">
+                    <span class="icone-midia">⏭</span>
+                </button>
+            </div>
+            <div class="btn-row row-centro">
+                <button class="btn-standard" data-comando="PASTA_MENOS">
+                    <span class="icone-midia">◀</span>
+                    <span>PASTA</span>
+                </button>
+                <button class="btn-standard" data-comando="PASTA_MAIS">
+                    <span class="icone-midia">▶</span>
+                    <span>PASTA</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="btn-row row-centro">
+            <button class="btn-standard btn-eq" data-comando="EQ">
+                <span>EQUALIZADOR (EQ)</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

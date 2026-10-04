@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-consumerir-local"
+        version="1.0.0">
+
+    <name>ConsumerIr</name>
+    <description>Transmissor infravermelho via ConsumerIrManager (Android)</description>
+
+    <js-module src="www/consumerir.js" name="ConsumerIr">
+        <clobbers target="cordova.plugins.consumerir" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ConsumerIr">
+                <param name="android-package" value="com.etech.consumerir.ConsumerIrPlugin" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.TRANSMIT_IR" />
+            <uses-feature android:name="android.hardware.consumerir" android:required="false" />
+        </config-file>
+
+        <source-file src="src/android/ConsumerIrPlugin.java"
+                     target-dir="src/com/etech/consumerir" />
+    </platform>
+</plugin>

@@ -1,0 +1,16 @@
+{
+  "name": "cordova-plugin-consumerir-local",
+  "version": "1.0.0",
+  "description": "Transmissor infravermelho via ConsumerIrManager (Android)",
+  "cordova": {
+    "id": "cordova-plugin-consumerir-local",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+body {
+    background-color: #0d0f12;
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Moldura do controle remoto */
+.remote-container {
+    background: linear-gradient(145deg, #161a22, #1a1f29);
+    width: 100%;
+    max-width: 340px;
+    border-radius: 40px;
+    padding: 30px 24px;
+    box-shadow: 10px 10px 30px #050608, -10px -10px 30px #1d232f;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Cabeçalho / display simulado */
+.remote-header {
+    text-align: center;
+    background: #090b0e;
+    padding: 14px;
+    border-radius: 18px;
+    border-bottom: 2px solid #ff3b30;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.remote-header h1 {
+    font-size: 1.1rem;
+    color: #ff3b30;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(255, 59, 48, 0.4);
+}
+
+.remote-header p {
+    font-size: 0.65rem;
+    color: #64748b;
+    margin-top: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Linhas de botões */
+.btn-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.row-volume {
+    justify-content: center;
+    gap: 32px;
+}
+
+.row-centro {
+    justify-content: center;
+}
+
+/* Botões */
+button {
+    background: linear-gradient(145deg, #1d232f, #161a22);
+    border: none;
+    color: #cbd5e1;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease;
+    box-shadow: 5px 5px 15px #07090c, -5px -5px 15px #212836;
+    position: relative;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+button:active {
+    background: #13171f;
+    box-shadow: inset 4px 4px 10px #07090c, inset -4px -4px 10px #212836;
+    transform: scale(0.96);
+    color: #ff3b30;
+}
+
+/* Sublegendas dentro dos botões */
+button span {
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.label-pwr {
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.label-sub {
+    font-size: 0.55rem;
+    color: #64748b;
+}
+
+.sinal {
+    font-size: 1.4rem;
+}
+
+.icone-midia {
+    font-size: 1.2rem;
+}
+
+/* Tamanhos */
+.btn-standard {
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+}
+
+.btn-large {
+    width: 82px;
+    height: 82px;
+    font-size: 1.2rem;
+}
+
+.btn-eq {
+    border-radius: 16px;
+    width: 100%;
+    height: 50px;
+}
+
+/* Botões de destaque */
+.btn-power {
+    background: linear-gradient(145deg, #ff453a, #d6281e);
+    color: #ffffff;
+    box-shadow: 5px 5px 15px #050608, -3px -3px 10px rgba(255, 59, 48, 0.2);
+}
+
+.btn-power:active {
+    background: #b51c14;
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+.btn-accent {
+    color: #34d399; /* Verde para Play/Pause */
+}
+
+.btn-accent:active {
+    color: #34d399;
+}
+
+/* Bloco de mídia */
+.media-cluster {
+    background: #0d1117;
+    border-radius: 30px;
+    padding: 12px;
+    box-shadow: inset 3px 3px 10px #050608, inset -3px -3px 10px #1d232f;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* LED emissor */
+.ir-led {
+    width: 6px;
+    height: 6px;
+    background-color: #334155;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: background-color 0.1s ease;
+}
+
+.ir-active {
+    background-color: #ff3b30;
+    box-shadow: 0 0 8px #ff3b30;
+}
